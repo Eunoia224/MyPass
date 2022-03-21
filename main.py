@@ -31,7 +31,7 @@ def search():
         with open("password.json") as data_file:
             data = json.load(data_file)
     except FileNotFoundError:
-        message_section.config(text="No data file found (empty)")
+        message_section.config(text="No data file found\n(empty)")
     else:
         if website_entry in data:
             email = data[website_entry]["Email"]
