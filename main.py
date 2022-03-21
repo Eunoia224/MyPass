@@ -21,11 +21,10 @@ def password_gen():
     shuffle(password_list)
     password = "".join(password_list)
     pass_input.delete(0, END)
-    # to copy to clipboard commented out because it was a bit annoying when testing because I was using clipt
-    # pyperclip.copy(password)
+    pyperclip.copy(password)
     message_section.config(text=f"Copied Password \n to clipboard")
     pass_input.insert(END, password)
-# ---------------------------- SEARCH  ------------------------------- # 🔐
+# ---------------------------- SEARCH  ------------------------------- # 
 def search():
     website_entry = website_input.get()
     try:
@@ -123,7 +122,7 @@ website_input.focus()
 
 email_input = Entry(width=51)
 email_input.grid(column=1, row=2, columnspan=2)
-email_input.insert(END, "alpha24ik@gmail.com")
+email_input.insert(END, "email@email.com")
 
 pass_input = Entry(width=33)
 pass_input.grid(column=1, row=3)
